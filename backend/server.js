@@ -59,7 +59,7 @@ app.get("/logout", (req, res) => {
 });
 
 //add new item to json file
-app.post("/items", cookieAuth, addItem);
+app.post("/add/items", cookieAuth, addItem);
 
 
 async function addItem (request, response) {
@@ -113,7 +113,7 @@ async function addItem (request, response) {
 }
 
 //** week 6, get all items from the json database*/
-app.get("/items", cookieAuth, getItems);
+app.get("/get/items", cookieAuth, getItems);
 async function getItems (request, response) {
     //begin here
 
@@ -139,7 +139,7 @@ async function getItems (request, response) {
 };
 
 //** week 6, search items service */
-app.get("/items/search", cookieAuth, searchItems);
+app.get("/get/searchitem", cookieAuth, searchItems);
 async function searchItems (request, response) {
     //begin here
     var searchField = request.query.taskname;
